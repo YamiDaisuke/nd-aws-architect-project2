@@ -1,0 +1,30 @@
+Group hierarchy,Region,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+Udacity,US East (N. Virginia),Amazon Virtual Private Cloud (VPC),0,37.35,448.20,USD,Number of NAT Gateways (1)
+Udacity,US East (N. Virginia),S3 Standard,0,2.7,32.40,USD,S3 Standard storage (100 GB per month)
+Udacity,US East (N. Virginia),Data Transfer,0,0,0.00,USD," Inbound (from: Internet) 100 TB per month
+ Outbound (to: Amazon Cloud Front) 100 TB per month
+"
+Udacity,US East (N. Virginia),Amazon Elastic IP,0,0,0.00,USD,"Number of EC2 instances (1), Number of EIPs per instance (1)"
+Udacity,US East (N. Virginia),AWS Data Transfer,0,11.11,133.32,USD,"Data Transfer, Data transfer cost (11.11)"
+Udacity,US East (N. Virginia),Amazon Virtual Private Cloud (VPC),0,36.5,438.00,USD,Number of Site-to-Site VPN Connections (1)
+Udacity,US East (Ohio),Amazon Virtual Private Cloud (VPC),0,37.35,448.20,USD,Number of NAT Gateways (1)
+Udacity > Web Servers,US East (N. Virginia),Amazon EC2,0,1035.78,12429.36,USD,"Operating system (Linux), Quantity (32), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (20 GB), Instance type (t3.medium)"
+Udacity > Web Servers,US East (N. Virginia),Elastic Load Balancing,0,74.83,897.96,USD,Number of Application Load Balancers (1)
+Udacity > Web Servers,US East (N. Virginia),Amazon Elastic Block Store (EBS),0,168,2016.00,USD,"Number of instances (32), Average duration each instance runs (730 hours per month), Storage amount (20 GB), Snapshot Frequency (Daily), Amount changed per snapshot (3 GB), Number of instances (1), Average duration each instance runs (730 hours per month), Storage amount (30 GB)"
+Udacity > Application Servers,US East (N. Virginia),Amazon EC2,0,3951.1,47413.20,USD,"Operating system (Linux), Quantity (32), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (20 GB), Instance type (t3.xlarge)"
+Udacity > Application Servers,US East (N. Virginia),Elastic Load Balancing,0,74.83,897.96,USD,Number of Application Load Balancers (1)
+Udacity > Application Servers,US East (N. Virginia),Amazon Elastic Block Store (EBS),0,168,2016.00,USD,"Number of instances (32), Average duration each instance runs (730 hours per month), Storage amount (20 GB), Snapshot Frequency (Daily), Amount changed per snapshot (3 GB), Number of instances (1), Average duration each instance runs (730 hours per month), Storage amount (30 GB)"
+Udacity > Main Database,US East (N. Virginia),Amazon Aurora MySQL-Compatible,0,6777.4,81328.80,USD,"Change records per statement (0.38), ( 4 instances of type db.r5.4xlarge  Memory optimized  OnDemand ), Storage amount (30 GB)"
+Udacity > Backup Database (Read Replica - Standby),US East (Ohio),Amazon Aurora MySQL-Compatible,0,1696.6,20359.20,USD,"Change records per statement (0.38), ( 1 instances of type db.r5.4xlarge  Memory optimized  OnDemand ), Storage amount (30 GB)"
+Udacity > Web Servers (Hot Standby),US East (Ohio),Amazon Elastic Block Store (EBS),0,168,2016.00,USD,"Number of instances (32), Average duration each instance runs (730 hours per month), Storage amount (20 GB), Snapshot Frequency (Daily), Amount changed per snapshot (3 GB), Number of instances (1), Average duration each instance runs (730 hours per month), Storage amount (30 GB)"
+Udacity > Web Servers (Hot Standby),US East (Ohio),Elastic Load Balancing,0,74.83,897.96,USD,Number of Application Load Balancers (1)
+Udacity > Web Servers (Hot Standby),US East (Ohio),Amazon EC2,0,1035.78,12429.36,USD,"Operating system (Linux), Quantity (32), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (20 GB), Instance type (t3.medium)"
+Udacity > Application Servers (Hot standby),US East (Ohio),Amazon Elastic Block Store (EBS),0,168,2016.00,USD,"Number of instances (32), Average duration each instance runs (730 hours per month), Storage amount (20 GB), Snapshot Frequency (Daily), Amount changed per snapshot (3 GB), Number of instances (1), Average duration each instance runs (730 hours per month), Storage amount (30 GB)"
+Udacity > Application Servers (Hot standby),US East (Ohio),Elastic Load Balancing,0,74.83,897.96,USD,Number of Application Load Balancers (1)
+Udacity > Application Servers (Hot standby),US East (Ohio),Amazon EC2,0,3951.1,47413.20,USD,"Operating system (Linux), Quantity (32), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (20 GB), Instance type (t3.xlarge)"
+
+
+
+"AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
+
+"Given the budget increase I have keeped db.r5.4xlarge from previous step but adding a new read replica in the main region. On top of that I have duplicated the number of EC2 instances for Web and Application servers (from the original 16 to 32). Finally I have decided to include a second region redundant infrastructure, this includes one replica of our database a hot standby of our Web and Application servers with the same number of instances (32 each), Application load balancers and NAT Gateways"
